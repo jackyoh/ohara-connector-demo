@@ -8,7 +8,7 @@ import com.island.ohara.kafka.connector.{RowSourceConnector, RowSourceTask, Task
 import scala.collection.JavaConverters._
 
 class RandomNumberSourceConnecotr extends RowSourceConnector {
-  private[perf] var settings: TaskSetting = _
+  private[this] var settings: TaskSetting = _
 
   override def _taskClass(): Class[_ <: RowSourceTask] = classOf[RandomNumberTask]
 
@@ -16,7 +16,7 @@ class RandomNumberSourceConnecotr extends RowSourceConnector {
     Seq.fill(maxTasks)(settings).asJava
 
   override def _start(config: TaskSetting): Unit = {
-    this.settings = settings
+    this.settings = config
   }
 
   override def _stop(): Unit = {

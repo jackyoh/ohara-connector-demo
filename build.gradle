@@ -23,4 +23,11 @@ dependencies {
   compile 'com.island.ohara:ohara-client:0.7.1'
   compile 'com.island.ohara:ohara-common:0.7.1'
   compile 'com.island.ohara:ohara-kafka:0.7.1'
+  compile 'com.island.ohara:ohara-testing-util:0.7.1'
+  compile 'org.apache.kafka:connect-api:2.2.1'
+  compile 'org.apache.kafka:connect-runtime:2.2.1'
+  compile 'org.apache.kafka:connect-json:2.2.1'
+  compile 'org.apache.kafka:connect-api:2.2.1'
+  testCompile 'org.scalatest:scalatest_2.12:3.0.2'
 }
+
