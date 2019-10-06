@@ -16,6 +16,12 @@ class RandomNumberTask extends RowSourceTask {
   override protected[ohara] def _start(settings: TaskSetting): Unit = {
     this.topics = settings.topicNames().asScala
     this.schema = settings.columns.asScala
+    if (schema.isEmpty) schema = Seq(
+      Column.builder().name("column1").dataType(DataType.STRING).order(0).build(),
+      Column.builder().name("column2").dataType(DataType.STRING).order(1).build(),
+      Column.builder().name("column3").dataType(DataType.STRING).order(2).build()
+    )
+
   }
 
   override protected[ohara] def _stop(): Unit = {
