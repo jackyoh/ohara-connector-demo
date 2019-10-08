@@ -14,7 +14,7 @@ import scala.concurrent.duration._
 import scala.concurrent.Await
 
 
-class TestRandomNumberSourceConnector extends Matchers{
+class TestRandomNumberSourceConnector extends Matchers {
 
   @Test
   def test(): Unit = {

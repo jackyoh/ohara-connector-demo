@@ -29,5 +29,6 @@ dependencies {
   compile 'org.apache.kafka:connect-json:2.2.1'
   compile 'org.apache.kafka:connect-api:2.2.1'
   testCompile 'org.scalatest:scalatest_2.12:3.0.2'
+  testCompile 'mysql:mysql-connector-java:8.0.17'
 }
 
